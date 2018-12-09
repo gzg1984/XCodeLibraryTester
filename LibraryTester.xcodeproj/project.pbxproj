@@ -13,6 +13,7 @@
 		9E662140204ABA1D000F1DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E66213F204ABA1D000F1DA3 /* Assets.xcassets */; };
 		9E662143204ABA1D000F1DA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E662141204ABA1D000F1DA3 /* LaunchScreen.storyboard */; };
 		9E662146204ABA1D000F1DA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E662145204ABA1D000F1DA3 /* main.m */; };
+		9E66214E204ABAAF000F1DA3 /* libGRcord.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E66214D204ABAAF000F1DA3 /* libGRcord.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9E662142204ABA1D000F1DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E662144204ABA1D000F1DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E662145204ABA1D000F1DA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9E66214D204ABAAF000F1DA3 /* libGRcord.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGRcord.a; path = ../../../Shared/lib/libGRcord.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E66214E204ABAAF000F1DA3 /* libGRcord.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				9E662135204ABA1D000F1DA3 /* LibraryTester */,
 				9E662134204ABA1D000F1DA3 /* Products */,
+				9E66214C204ABAAE000F1DA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +73,14 @@
 				9E662145204ABA1D000F1DA3 /* main.m */,
 			);
 			path = LibraryTester;
+			sourceTree = "<group>";
+		};
+		9E66214C204ABAAE000F1DA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E66214D204ABAAF000F1DA3 /* libGRcord.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +294,11 @@
 				DEVELOPMENT_TEAM = 72C7JZ454D;
 				INFOPLIST_FILE = LibraryTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = /Users/Shared/lib/;
 				PRODUCT_BUNDLE_IDENTIFIER = zhiganggao.LibraryTester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = /Users/Shared/include;
 			};
 			name = Debug;
 		};
